@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Store Sales Project</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+      body {
+          background-image: url('{{ url_for("static", filename="fstore.jpg") }}');
+          background-size: cover; 
+          background-position: center center;
+          background-repeat: no-repeat;
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fstore.css') }}">
+  </head>
+  <body>
+    <div class="d-flex justify-content-center p-3 px-md-4 mb-3 bg-dark text-white border-bottom shadow-sm">
+      <h1 class="my-0 font-weight-bold">SSPredictor</h1>
+    </div>
+
+    
+
+    <div class="container p-3 my-3 bg-secondary text-white container-sm">
+      
+    <form class="form-group" action="/" method="POST">
+      <label for="Quantity">Quantity :</label>
+      <input class="form-control" type="number" name="Quantity" min="0" step="1">
+      <label for="Unit_Price">UnitPrice :</label>
+      <input class="form-control" type="number" name="Unit Price" min="0" step="1">
+      <label for="Date_Day">Date Day :</label>
+      <input class="form-control" type="number" name="Date Day" min="0" step="1">
+      <label for="Casual_Shirts">Casual Shirts :</label>
+      <input class="form-control" type="number" name="Casual Shirts" min="0" step="1">
+      <label for="Coats">Coats :</label>
+      <input class="form-control" type="number" name="Coats" min="0" step="1">
+      <label for="Cycling_Jerseys">Cycling Jerseys :</label>
+      <input class="form-control" type="number" name="Cycling Jerseys" min="0" step="1">
+      <label for="Dress">Dress :</label>
+      <input class="form-control" type="number" name="Dress" min="0" step="1">
+      <label for="Formal_Shirts">Formal Shirts :</label>
+      <input class="form-control" type="number" name="Formal Shirts" min="0" step="1">
+      <label for="GolfShoes">GolfShoes :</label>
+      <input class="form-control" type="number" name="GolfShoes" min="0" step="1">
+      <label for="Jeans">Jeans :</label>
+      <input class="form-control" type="number" name="Jeans" min="0" step="1">
+      <label for="Knitwear">Knitwear :</label>
+      <input class="form-control" type="number" name="Knitwear" min="0" step="1">
+      <label for="Pants">Pants :</label>
+      <input class="form-control" type="number" name="Pants" min="0" step="1">
+      <label for="Polo_Shirts">Polo Shirts :</label>
+      <input class="form-control" type="number" name="Polo Shirts" min="0" step="1">
+      <label for="Pyjamas">Pyjamas :</label>
+      <input class="form-control" type="number" name="Pyjamas" min="0" step="1">
+      <label for="Shorts">Shorts :</label>
+      <input class="form-control" type="number" name="Shorts" min="0" step="1">
+      <label for="Suits">Suits :</label>
+      <input class="form-control" type="number" name="Suits" min="0" step="1">
+      <label for="Sweats">Sweats :</label>
+      <input class="form-control" type="number" name="Sweats" min="0" step="1">
+      <label for="Ties">Ties :</label>
+      <input class="form-control" type="number" name="Ties" min="0" step="1">
+      <label for="Tshirts">Tshirts :</label>
+      <input class="form-control" type="number" name="Tshirts" min="0" step="1">
+      <label for="Underwear">Underwear :</label>
+      <input class="form-control" type="number" name="Underwear" min="0" step="1">
+    </br>
+      <button class="btn btn-dark" type="submit" name="submit">Submit</button>
+    </form>
+
+    <!-- Display predicted sales revenue -->
+    {% if prediction_value %}
+      <h6 class="mt-4">Predicted Sales Revenue: {{ prediction_value }}</h6>
+    {% endif %}
+    </div>
+
+                
+  </body>
+</html>
